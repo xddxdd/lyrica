@@ -1,0 +1,13 @@
+{
+  "id": "lyrica",
+  "name": "Lyrica",
+  "description": "Display synchronized lyrics from the Lyrica backend (https://github.com/chiyuki0325/lyrica). Requires the Lyrica daemon running on 127.0.0.1:15650.",
+  "version": "0.1.0",
+  "author": "chiyuki0325",
+  "icon": "view-media-lyrics",
+  "type": "widget",
+  "component": "./contents/ui/main.qml",
+  "settings": "./contents/ui/configGeneral.qml",
+  "permissions": ["settings_read", "settings_write", "network"],
+  "repo": "https://github.com/chiyuki0325/lyrica"
+}

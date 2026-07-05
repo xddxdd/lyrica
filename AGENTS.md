@@ -10,6 +10,7 @@ Guidelines for AI agents working in this repository.
 
 - A **Rust backend** daemon that discovers MPRIS2 music players via D-Bus, fetches lyrics from multiple sources, synchronizes lyric lines in real time, and exposes results over a WebSocket/HTTP server on `127.0.0.1:15650`.
 - A **KDE Plasma 6 Plasmoid** (QML) that connects to the backend and renders the current lyric line on the panel.
+- A **DankMaterialShell (DMS) widget** (QML) that connects to the backend and renders the current lyric line in the DMS bar.
 - An **OBS Studio plugin** (Python) that similarly consumes the WebSocket feed.
 
 ## Repository Layout
@@ -49,6 +50,9 @@ frontend/
     contents/ui/          # QML files (main.qml, configBackend.qml, configFrontend.qml)
     config/               # KConfig XML schema
     translate/            # .po translation files (zh_CN, zh_TW)
+  dms/                    # DankMaterialShell (DMS) widget
+    plugin.json           # Plugin manifest
+    contents/ui/          # QML files (main.qml, configGeneral.qml)
   obs_studio/             # OBS Studio Python plugin
   build_kde_plasmoid.sh   # Builds .plasmoid package
 docs/                     # User-facing documentation
